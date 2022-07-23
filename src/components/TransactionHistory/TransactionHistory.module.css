@@ -1,0 +1,33 @@
+.transactionHistory {
+  margin-left: auto;
+  margin-right: auto;
+
+  color: black;
+  width: 450px;
+  border: 2px;
+  border-style: double;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: beige;
+}
+
+.header {
+  border-bottom: 5px;
+  border-style: groove;
+  background-color: aqua;
+}
+
+.rowItem {
+  border: 2px solid;
+  padding: 15px;
+}
+
+.dataItem {
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+.dataItem:first-child {
+  text-align: left;
+  padding-left: 20px;
+}
