@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
 export const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
@@ -9,7 +13,11 @@ export const Statistics = ({ title, stats }) => {
 
       <ul className={css.statList}>
         {stats.map(stat => (
-          <li className={css.item} key={stat.id}>
+          <li
+            className={css.item}
+            key={stat.id}
+            style={{ backgroundColor: getRandomHexColor() }}
+          >
             <span className={css.label}>{stat.label}</span>
             <span className={css.percentage}>{stat.percentage}</span>
           </li>
@@ -28,4 +36,8 @@ Statistics.propTypes = {
       percentage: PropTypes.number.isRequired,
     })
   ),
+};
+
+Statistics.defaultProps = {
+  title: '',
 };
